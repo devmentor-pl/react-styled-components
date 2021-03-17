@@ -10,7 +10,7 @@
                 "ssr": false, 
                 "displayName": true, 
                 "fileName": true,
-                "minify": false,
+                "minify": true,
                 "pure": true
             }
         ]

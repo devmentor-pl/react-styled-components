@@ -53,7 +53,7 @@ module.exports = function(env = {}) {
                 },
                 {
                     test: /\.(ttf|otf|woff|woff2)$/,
-                    // dodaję rozszerzenia obrazów
+                    // dodaję rozszerzenia fontów
                     use: {
                         loader: 'file-loader',
                         options: {

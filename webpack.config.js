@@ -22,7 +22,7 @@ module.exports = function (env = {}) {
         output: {
             path: path.resolve(__dirname, 'build'),
             // definiuje ścieżką wyjściową
-            filename: 'app.[hash].js',
+            filename: 'app.[contenthash].js',
             // definiuję nazwę pliku wyjściowego
         },
         module: {
@@ -94,7 +94,7 @@ module.exports = function (env = {}) {
                     use: {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[hash].[ext]',
+                            name: '[name].[contenthash].[ext]',
                             // ustawiam nazwę pliku
                             outputPath: 'images',
                             // ustawiam nazwę katalogu, do którego
@@ -109,7 +109,7 @@ module.exports = function (env = {}) {
                     use: {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[hash].[ext]',
+                            name: '[name].[contenthash].[ext]',
                             // ustawiam nazwę pliku
                             outputPath: 'fonts',
                             // ustawiam nazwę katalogu, do którego
@@ -128,7 +128,7 @@ module.exports = function (env = {}) {
                 // określan nazwę dla pliku
             }),
             new CssWebpackPlugin({
-                filename: '[name].[hash].css',
+                filename: '[name].[contenthash].css',
                 // określam nazwę pliku css
             }),
             new CleanWebpackPlugin(),
